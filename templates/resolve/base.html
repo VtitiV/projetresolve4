@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section id="sidebar">
+  <div class="white-label">
+  </div>
+  <div id="sidebar-nav">
+    <ul>
+      <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+      <li><a href="#"><i class="fa fa-desktop"></i> Incidents</a></li>
+      <li><a href="#"><i class="fa fa-usd"></i> Demandes</a></li>
+      <li><a href="#"><i class="fa fa-pencil-square-o"></i> Procedures</a></li>
+      <li><a href="#"><i class="fa fa-sitemap"></i> Videos</a></li>
+      <li><a href="#"><i class="fa fa-line-chart"></i> Utilisateurs</a></li>
+
+    </ul>
+  </div>
+</section>
+<section id="content">
+  <div id="header">
+    <div class="header-nav">
+      <div class="menu-button">
+        <i class="fa fa-navicon"></i>
+      </div>
+      <!--<div class="nav">
+        <ul>
+          <li class="nav-settings">
+            <div class="font-icon"><i class="fa fa-tasks"></i></div>
+          </li>
+          <li class="nav-mail">
+            <div class="font-icon"><i class="fa fa-envelope-o"></i></div>
+          </li>
+          <li class="nav-calendar">
+            <div class="font-icon"><i class="fa fa-calendar"></i></div>
+          </li>
+          <li class="nav-chat">
+            <div class="font-icon"><i class="fa fa-comments-o"></i></div>
+          </li>
+          <li class="nav-profile">
+            <div class="nav-profile-image">
+              <img src="https://skynet.marketecture.com/user_avatars/258800/Hayley-Helsten.jpg" alt="profile-img" alt="profile image">
+              <div class="nav-profile-name">Jane Smith<i class="fa fa-caret-down"></i></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>-->
+  <div class="content">
+    <div class="content-header">
+      <h1>Bienvenu sur E-Resolve</h1>
+    </div>
+    <div class="widget-box sample-widget">
+      <div class="widget-header">
+        <h2>Incident</h2>
+        <i class="fa fa-cog"></i>
+      </div>
+      <div class="widget-content">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+      </div>
+    </div>
+    <div class="widget-box sample-widget">
+      <div class="widget-header">
+        <h2>Demande</h2>
+        <i class="fa fa-cog"></i>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
+      </div>
+      </div>
+    </div>
+</section>
+    {% block content %} {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>
