@@ -4,8 +4,8 @@ from django.shortcuts import render
 from Resolve.models.personne import Personne
 
 
-def personne_list(request):
-    selected = "personnes"
+def personne_list2(request):
+    selected = "utilisateurs"
     personne_list = Personne.objects.all()
 
     paginator = Paginator(personne_list.order_by('-date_mise_a_jour'), 10)
@@ -17,4 +17,4 @@ def personne_list(request):
     except EmptyPage:
         personne_list2 = paginator.page(paginator.num_pages())
 
-    return render(request, "resolve/personne_list.html", locals())
+    return render(request, "resolve/personne/personne_list.html", locals())

@@ -65,7 +65,7 @@ TEMPLATES = [
         },
     },
 ]
-TEMPLATES_DIR = os.path.join(BASE_DIR, "/templates/")
+
 
 WSGI_APPLICATION = 'Eresolve.wsgi.application'
 
