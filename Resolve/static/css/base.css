@@ -276,3 +276,7 @@ div.user-image {
   margin: 11px 11px 0 0;
   font-size: 20px;
 }
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from Resolve.views import home
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",include("Resolve.urls")),
+    path("", include("Resolve.urls")),
 ]
