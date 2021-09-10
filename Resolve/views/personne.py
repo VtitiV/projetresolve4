@@ -5,7 +5,7 @@ from Resolve.models.personne import Personne
 
 
 def personne_list2(request):
-    selected = "utilisateurs"
+    selected = "personnes"
     personne_list = Personne.objects.all()
 
     paginator = Paginator(personne_list.order_by('-date_mise_a_jour'), 10)
