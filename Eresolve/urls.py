@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+import Resolve
+from Resolve.views import personne
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("Resolve.urls")),
+    path("home/", include("Resolve.urls")),
+    #path("personne/", include("Resolve.urls")),
+
 ]
