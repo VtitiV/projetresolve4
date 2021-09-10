@@ -5,5 +5,5 @@ from .views import home, personne
 urlpatterns = [
     path("", home.index, name="home"),
     # Personnes
-    path("personnes", personne.personne_list2, name="personne"),
+    path("personne/", personne.personne_list2, name="personne"),
 ]
