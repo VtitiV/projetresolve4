@@ -14,14 +14,30 @@
     <div class="white-label">
     </div>
     <div id="sidebar-nav">
-        <ul>
-            <li><a href="{% url 'home' %}"><i class="fa fa-dashboard"></i> Accueil</a></li>
-            <li><a href="#"><i class="fa fa-desktop"></i> Incidents</a></li>
-            <li><a href="#"><i class="fa fa-usd"></i> Demandes</a></li>
-            <li><a href="#"><i class="fa fa-pencil-square-o"></i> Procedures</a></li>
-            <li><a href="#"><i class="fa fa-sitemap"></i> Videos</a></li>
-            <li><a href="{% url 'personne' %}"><i class="fa fa-users"></i> Personne</a></li>
-
+        <ul >
+            <li class="{% if selected  == 'home' %}active{% endif %}">
+                <a href="{% url 'home' %}"><i class="fa fa-dashboard"></i> Accueil</a></li>
+            <li class="{% if selected  == 'incident' %}active{% endif %}">
+                <a href="#"><i class="fa fa-desktop"></i> Incidents</a></li>
+            <li class="{% if selected  == 'demande' %}active{% endif %}" >
+                <a href="#"><i class="fa fa-usd"></i> Demandes</a></li>
+            <li class="{% if selected  == 'procedure' %}active{% endif %}">
+                <a href="#"><i class="fa fa-pencil-square-o"></i> Procedures</a></li>
+            <li class="{% if selected  == 'video' %}active{% endif %}">
+                <a href="#"><i class="fa fa-sitemap"></i> Videos</a></li>
+            <li class="{% if selected  == 'personne' %}active{% endif %}">
+                <a href="{% url 'personne' %}"><i class="fa fa-users"></i> Personne</a></li>
+            <li class="header">Mon Compte</li>
+            <li>
+                <a href="{% url 'logout' %}">
+                <i class="fas fa-power-of" aria-hidden="true"></i>Déconnexion
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'password_change' %}">
+                <i class="fas fa-key" aria-hidden="true"></i>Changer de mot de passe
+                </a>
+            </li>
         </ul>
     </div>
 </section>

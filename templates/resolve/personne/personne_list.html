@@ -15,19 +15,20 @@
             <td>{{personne.nom}}</td>
             <td>{{personne.prenom}}</td>
             <td>{{personne.telephone}}</td>
+            <td>{{personne.id}}</td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
     <div class="pagination">
         {% if personne_list.has_previous %}
-        <a href=" {% url 'personne'%}?page={{personne_list2.previous_page_number}}">Precedent</a>
+        <a href=" {% url 'personne'%}?page={{personne_list.previous_page_number}}">Precedent</a>
         {% endif %}
         <span class="current">
             Page {{ personne_list.number }} sur {{ personne_list.paginator.num_pages }}
         </span>
         {% if personne_list.has_next %}
-        <a href=" {% url 'personne'%}?page={{personne_list2.next_page_number}}">Suivante</a>
+        <a href=" {% url 'personne'%}?page={{personne_list.next_page_number}}">Suivante</a>
         {% endif %}
     </div>
 </div>

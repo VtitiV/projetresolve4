@@ -8,7 +8,7 @@ def personne_list2(request):
     selected = "personne"
     personne_list = Personne.objects.all()
 
-    paginator = Paginator(personne_list.order_by('date_mise_a_jour'), 30)
+    paginator = Paginator(personne_list.order_by('date_mise_a_jour'), 10)
     try:
         page = request.GET.get("page")
         if not page:

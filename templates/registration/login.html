@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <link href="{% static 'css/login.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div id=login">
+     <h3 class="text-center text-white pt-5">Application E-Resolve</h3>
+     <div class="container">
+         <div  class="row justify-content-center align-items-center, login-row">
+             <div id="login-column" class="col-md-6">
+               <div id="login-box" class="col-md-12">
+      <form id="login-form" class="form" action="" method="post">
+          {% csrf_token %}
+    <div class="form-group">
+        <label for="{{ form.username.id_for_label }}" class="text-info" >{{form.username.label.tag}}</label><br>
+        <input type="text" name="{{form.username.html_name}}" id="{{form.username.id_for_label}}">
+    </div>
+    <div class="form-group">
+        <label for="{{ form.pasword.id_for_label }}" class="text-info">{{form.pasword.label.tag}}</label><br>
+        <input type="password" name="{{form.pasword.html_name}}" id="{{form.pasword.id_for_label}}">
+    </div>
+      <div class="form-group">
+         <button type="submit" class="btn btn-info">Connexion</button>
+      </div>
+    </form>
+  </div>
+                 </div>
+             </div>
+         </div>
+</div>
+
+
+</body>
+</html>
