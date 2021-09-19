@@ -20,12 +20,12 @@
     <div class="white-label">
     </div>
     <div id="sidebar-nav">
-        <ul >
+        <ul>
             <li class="{% if selected  == 'home' %}active{% endif %}">
                 <a href="{% url 'home' %}"><i class="fa fa-dashboard"></i> Accueil</a></li>
             <li class="{% if selected  == 'incident' %}active{% endif %}">
                 <a href="#"><i class="fa fa-desktop"></i> Incidents</a></li>
-            <li class="{% if selected  == 'demande' %}active{% endif %}" >
+            <li class="{% if selected  == 'demande' %}active{% endif %}">
                 <a href="#"><i class="fa fa-usd"></i> Demandes</a></li>
             <li class="{% if selected  == 'procedure' %}active{% endif %}">
                 <a href="#"><i class="fa fa-pencil-square-o"></i> Procedures</a></li>
@@ -36,12 +36,12 @@
             <li class="header" style="color: blue">Mon Compte</li>
             <li>
                 <a href="{% url 'logout' %}">
-                <i class="fas fa-power-of" aria-hidden="true"></i>Déconnexion
+                    <i aria-hidden="true" class="fas fa-power-of"></i>Déconnexion
                 </a>
             </li>
             <li>
                 <a href="{% url 'password_change' %}">
-                <i class="fas fa-key" aria-hidden="true"></i>Changer de mot de passe
+                    <i aria-hidden="true" class="fas fa-key"></i>Changer de mot de passe
                 </a>
             </li>
         </ul>
@@ -81,7 +81,6 @@
     <div class="content-header">
     </div>
 </div>
-
 
 
 <script crossorigin="anonymous"
