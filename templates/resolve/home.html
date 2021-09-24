@@ -9,31 +9,25 @@
          <label for="telephone">Nom :</label>
         <input type="text" id="telephone" name="telephone">
     </div>
-    <div>
-        <span>
-            <a href="{% url 'incident'%}">
+    <button onclick="maFonction()">Bouton</button>
+    <div id="maDIV" style="display:none;">
+        {% include "incident/Incidents.html" %}
 
-                Incident</a>
-        </span>
-    </div>
-</div>
-<div class="widget-box sample-widget">
-    <div class="widget-header">
-        <h2>Incident</h2>
-        <i class="fa fa-cog"></i>
-    </div>
-    <div class="widget-content">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
-    </div>
-</div>
-<div class="widget-box sample-widget">
-    <div class="widget-header">
-        <h2>Demande</h2>
-        <i class="fa fa-cog"></i>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87118/sample-data-1.png">
-    </div>
-</div>
-</div>
-</section>
 
+    </div>
+
+    </div>
+
+
+
+<script>
+function maFonction() {
+  var div = document.getElementById("maDIV");
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+</script>
 {% endblock %}
