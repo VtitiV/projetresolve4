@@ -8,7 +8,7 @@ class Personne(models.Model):
     telephone = models.CharField(max_length=10)
     lieu = models.CharField(max_length=30, blank=True)
 
-    date_mise_a_jour = models.DateField(verbose_name="Date d'inscription ", auto_now_add=True)
+    date_mise_a_jour = models.DateField(verbose_name="Date inscription ", auto_now_add=True)
 
 
 def __str__(self):
