@@ -1,7 +1,8 @@
 from django.urls import path
 
 from .views import home, personne
-from views import incident
+from .views import incident
+
 
 urlpatterns = [
     path("", home.index, name="home"),
