@@ -8,4 +8,9 @@ def incidents_list(request):
 
 def connexionhm(request):
     selected = "connexionHM"
-    return render(request, "resolve/incident/list_incident/connexionHM.html", locals())
+    context = {
+        'text1' : "Nous avons verifier les codes"
+    }
+    return render(request, "resolve/incident/list_incident/connexionHM.html", context, locals())
+
+
