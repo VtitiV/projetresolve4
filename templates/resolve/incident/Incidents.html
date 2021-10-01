@@ -3,10 +3,10 @@
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a class="btn btn-primary" href="{% include 'resolve/incident/list_incident/connexionHM.html' %}">Go
-                    somewhere</a>
+                <h5 class="card-title">Incident de connexion HM</h5>
+                <p class="card-text">Probleme de connexion (pas sur HM BLOC)</p>
+                {% include 'resolve/incident/list_incident/connexionHM.html' %}
+                {{ context.text1 }}
             </div>
         </div>
     </div>
