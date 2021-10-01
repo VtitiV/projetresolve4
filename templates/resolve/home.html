@@ -4,11 +4,11 @@
 <div>
     <div>
         <label for="name">Nom :</label>
-        <input type="text" id="name" name="user_name">
-         <label for="name">Prenom :</label>
-        <input type="text" id="prenom" name="user_prenom">
-         <label for="telephone">Nom :</label>
-        <input type="text" id="telephone" name="telephone">
+        <input id="name" name="user_name" type="text">
+        <label for="name">Prenom :</label>
+        <input id="prenom" name="user_prenom" type="text">
+        <label for="telephone">Nom :</label>
+        <input id="telephone" name="telephone" type="text">
     </div>
     <button onclick="maFonction()">Bouton</button>
     <div id="maDIV" style="display:none;">
@@ -17,8 +17,7 @@
 
     </div>
 
-    </div>
-
+</div>
 
 
 <script>
@@ -30,5 +29,6 @@ function maFonction() {
     div.style.display = "none";
   }
 }
+
 </script>
 {% endblock %}
