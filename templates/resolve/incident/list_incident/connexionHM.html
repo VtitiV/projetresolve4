@@ -10,8 +10,15 @@
           </div>
           <div id="collapse1" class="collapse show" aria-labelledby="header1" data-parent="#exempleAccordeon">
             <div class="card-body">
-              <p>Verifier en PMAD avec l'utilisateur si il rentre bien les bon identifiant</p>
-              <span class="small">Si cela a fonctionner clic sur oui sinon soluce n°2.</span>
+              <p>L'utilisateur avait t'il deja acces avant?</p>
+                  <HR size=2 align=center width="100%">
+              <p>Verifier en <a target="_blank" href="{% url 'ancres' %}#pmad" >
+                <button type="button" class="btn btn-outline-success btn-sm mb-2" data-toggle="tooltip" data-placement="top" title="prise en main a distance">PMAD</button>
+                 </a>
+                avec l'utilisateur si il rentre bien les bon identifiant</p>
+              <p>comparer en parallele avec sa fiche utilisateur presente sur <button type="button" class="btn btn-outline-success btn-sm mb-2" data-toggle="tooltip" data-placement="top" title="Infos gestion utilisateurs">syscompte</button></p>
+              <HR size=2 align=center width="100%">
+              <span class="text-warning" >Si cela a fonctionner clic sur oui sinon soluce n°2.</span>
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 OUI
@@ -27,7 +34,7 @@
                       </button>
                     </div>
                     <div class="modal-body" id="myText" >
-                      <a href="url/Ancres.html#pmad"> PMAD </a> sur le poste .... verification des identifiants avec l'utilisateur,
+                      <a target="_blank" href="{% url 'ancres' %}#pmad"> PMAD </a> sur le poste .... verification des identifiants avec l'utilisateur,
                       celui si rentre identifiants et mots de passe a l'identique de syscompte.
                       tout semble correctement paramètré
                       </div>

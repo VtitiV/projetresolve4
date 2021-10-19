@@ -10,13 +10,16 @@
         <label for="telephone">Nom :</label>
         <input id="telephone" name="telephone" type="text">
     </div>
-    <button onclick="maFonction()">Bouton</button>
-    <div id="maDIV" style="display:none;">
-        {% include "resolve/incident/Incidents.html" %}
-
-
+    <div style="justify-content: space-evenly">
+        <button onclick="maFonction()"class="btn btn-outline-primary btn-lg mb-2">INCIDENT</button>
+            <div id="maDIV" style="display:none;">
+            {% include "resolve/incident/Incidents.html" %}
+            </div>
+        <button onclick="maFonction2()"class="btn btn-outline-primary btn-lg mb-2">DEMANDE</button>
+            <div id="maDIV2" style="display:none;">
+             {% include "resolve/demande/Demandes.html" %}
+            </div>
     </div>
-
 </div>
 
 
@@ -25,6 +28,14 @@ function maFonction() {
   var div = document.getElementById("maDIV");
   if (div.style.display === "none") {
     div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
+}
+function maFonction2() {
+  var div = document.getElementById("maDIV2");
+  if (div.style.display === "none") {
+    div.style.display = "block" ;
   } else {
     div.style.display = "none";
   }
