@@ -34,7 +34,7 @@
                       </button>
                     </div>
                     <div class="modal-body" id="myText" >
-                      <a target="_blank" href="{% url 'ancres' %}#pmad"> PMAD </a> sur le poste .... verification des identifiants avec l'utilisateur,
+                      <a target="_blank" href="{% url 'ancres' %}#pmad"> PMAD </a> sur le poste .... avec utilisateur {% for personne in personne_list%}{{Personne.nom}}{% endfor %} verification des identifiants avec l'utilisateur,
                       celui si rentre identifiants et mots de passe a l'identique de syscompte.
                       tout semble correctement paramètré
                       </div>
