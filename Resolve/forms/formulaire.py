@@ -1,7 +1,8 @@
-from  django.forms import  ModelForm
-from Resolve.models import personne
+from django.forms import Form, CharField
+from django import forms
 
-class userForm(ModelForm):
-    class Meta:
-        model = Personne
-        fields = ('nom', 'prenom', 'poste', 'telephone','service')
+
+class PersonneSearchForm(forms.ModelForm):
+    nom = CharField(max_length=100, required=False)
+    prenom = CharField(max_length=100, required=False)
+    poste = CharField(max_length=100, required=False)

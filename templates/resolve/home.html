@@ -1,10 +1,10 @@
 {% extends "resolve/base.html" %}
 {% load static %}
 {% block content %}
+
 <div>
     <div>
-
-        <label for="name">Nom :{{admin.nom}}</label>
+        <label for="name">Nom :</label>
         <input id="name" name="user_name" type="text">
         <label for="name">Prenom :</label>
         <input id="prenom" name="user_prenom" type="text">
@@ -12,7 +12,12 @@
         <input id="telephone" name="telephone" type="text">
 
     </div>
-    <div>{% block userform %}{% endblock %}</div>
+    {% csrf_token %}
+    {% block userform1 %}test
+    {% endblock %}
+
+
+    </form>
 
     <div style="justify-content: space-evenly">
         <button onclick="maFonction()"class="btn btn-outline-primary btn-lg mb-2">INCIDENT</button>
@@ -46,4 +51,5 @@ function maFonction2() {
 }
 
 </script>
+
 {% endblock %}

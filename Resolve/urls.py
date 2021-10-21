@@ -13,4 +13,6 @@ urlpatterns = [
     path("connexionhm/", incident.connexionhm, name="incidenthm"),
     # vue ancres
     path("ancres/", ancres.listancre, name="ancres"),
+    # vue user
+    path("userforms/", personne.personne_list3, name="user"),
 ]
