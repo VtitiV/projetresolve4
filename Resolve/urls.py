@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import home, personne
-from .views import incident, ancres
+from .views import incident, ancres, formulaire
 
 urlpatterns = [
     path("", home.index, name="home"),
@@ -14,5 +14,5 @@ urlpatterns = [
     # vue ancres
     path("ancres/", ancres.listancre, name="ancres"),
     # vue user
-    path("userforms/", personne.personne_list3, name="user"),
+    path("userforms/", formulaire.formuser, name="user"),
 ]

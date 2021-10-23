@@ -1,8 +1,9 @@
+from django.shortcuts import render
+from Resolve.formulaire import PersonneSearchForm
 from Resolve.models.personne import Personne
-from Resolve.forms.formulaire import userForm
 
 
 def formuser(request):
-    form = userForm()
-
-    return render(request, 'userforms.html', {'form': form})
+    form = PersonneSearchForm()
+    select = "userforms"
+    return render(request, 'forms/userforms.html', {'form': form })

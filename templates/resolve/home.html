@@ -12,12 +12,11 @@
         <input id="telephone" name="telephone" type="text">
 
     </div>
+    {{ form.as_p}}
     {% csrf_token %}
-    {% block userform1 %}test
+    {% block userform1 %}test{{ form.as_p}}
     {% endblock %}
 
-
-    </form>
 
     <div style="justify-content: space-evenly">
         <button onclick="maFonction()"class="btn btn-outline-primary btn-lg mb-2">INCIDENT</button>

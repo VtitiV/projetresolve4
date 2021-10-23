@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from Resolve.models.personne import Personne
-from django import forms
 
 
 # @login_required
