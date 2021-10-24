@@ -1,8 +1,9 @@
-from django import forms
+from django.forms import ModelForm
+
 from Resolve.models.personne import Personne
 
 
-class PersonneSearchForm(forms.ModelForm):
+class PersonneSearchForm(ModelForm):
     class Meta:
         model = Personne
         fields = ['nom', 'prenom']

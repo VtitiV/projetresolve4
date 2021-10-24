@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'import_export',
     'Resolve',
 
-
 ]
 
 MIDDLEWARE = [

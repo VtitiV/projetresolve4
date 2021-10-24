@@ -1,9 +1,6 @@
 from django.core.paginator import Paginator, EmptyPage
-from django.shortcuts import render, redirect
-from django.template.defaultfilters import urlencode
-from django.urls import reverse
+from django.shortcuts import render
 
-from Resolve.formulaire import PersonneSearchForm
 from Resolve.models.personne import Personne
 
 
@@ -20,5 +17,3 @@ def personne_list2(request):
     except EmptyPage:
         personne_list = paginator.page(paginator.num_pages())
     return render(request, "resolve/personne/personne_list.html", locals())
-
-

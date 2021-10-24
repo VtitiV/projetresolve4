@@ -1,78 +1,97 @@
 {% block incidentconnexionHM  %}
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <button class="btn btn-primary" data-toggle="collapse" data-target="#collapsea" role="button" aria-expanded="false" aria-controls="collapsea">Solution</button>
-      <div class="collapse" id="collapsea"  data-toggle="collapse">
-            <div class="accordion" id="exempleAccordeon">
+<meta charset='utf-8'>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<button aria-controls="collapsea" aria-expanded="false" class="btn btn-primary" data-target="#collapsea" data-toggle="collapse"
+        role="button">Solution
+</button>
+<div class="collapse" data-toggle="collapse" id="collapsea">
+    <div class="accordion" id="exempleAccordeon">
         <div class="card">
-          <div class="card-header" id="header1">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Soluce n°1</button>
-          </div>
-          <div id="collapse1" class="collapse show" aria-labelledby="header1" data-parent="#exempleAccordeon">
-            <div class="card-body">
-              <p>L'utilisateur avait t'il deja acces avant?</p>
-                  <HR size=2 align=center width="100%">
-              <p>Verifier en <a target="_blank" href="{% url 'ancres' %}#pmad" >
-                <button type="button" class="btn btn-outline-success btn-sm mb-2" data-toggle="tooltip" data-placement="top" title="prise en main a distance">PMAD</button>
-                 </a>
-                avec l'utilisateur si il rentre bien les bon identifiant</p>
-              <p>comparer en parallele avec sa fiche utilisateur presente sur <button type="button" class="btn btn-outline-success btn-sm mb-2" data-toggle="tooltip" data-placement="top" title="Infos gestion utilisateurs">syscompte</button></p>
-              <HR size=2 align=center width="100%">
-              <span class="text-warning" >Si cela a fonctionner clic sur oui sinon soluce n°2.</span>
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                OUI
-              </button>
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Voici un exemple de tache a coller dans le ticket</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body" id="myText" >
-                      <a target="_blank" href="{% url 'ancres' %}#pmad"> PMAD </a> sur le poste .... avec utilisateur {% for personne in personne_list%}{{Personne.nom}}{% endfor %} verification des identifiants avec l'utilisateur,
-                      celui si rentre identifiants et mots de passe a l'identique de syscompte.
-                      tout semble correctement paramètré
-                      </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="card-header" id="header1">
+                <button aria-controls="collapse1" aria-expanded="true" class="btn btn-link" data-target="#collapse1"
+                        data-toggle="collapse" type="button">Soluce n°1
+                </button>
             </div>
-          </div>
+            <div aria-labelledby="header1" class="collapse show" data-parent="#exempleAccordeon" id="collapse1">
+                <div class="card-body">
+                    <p>L'utilisateur avait t'il deja acces avant?</p>
+                    <HR align=center size=2 width="100%">
+                    <p>Verifier en <a href="{% url 'ancres' %}#pmad" target="_blank">
+                        <button class="btn btn-outline-success btn-sm mb-2" data-placement="top" data-toggle="tooltip"
+                                title="prise en main a distance" type="button">PMAD
+                        </button>
+                    </a>
+                        avec l'utilisateur si il rentre bien les bon identifiant
+                    </p>
+                    <p>comparer en parallele avec sa fiche utilisateur presente sur
+                        <button class="btn btn-outline-success btn-sm mb-2" data-placement="top" data-toggle="tooltip"
+                                title="Infos gestion utilisateurs" type="button">syscompte
+                        </button>
+                    </p>
+                    <HR align=center size=2 width="100%">
+                    <span class="text-warning">Si cela a fonctionner clic sur oui sinon soluce n°2.</span>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary" data-target="#exampleModal" data-toggle="modal" type="button">
+                        OUI
+                    </button>
+                    <!-- Modal -->
+                    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal"
+                         role="dialog" tabindex="-1">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Voici un exemple de tache a coller
+                                        dans le ticket</h5>
+                                    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="myText">
+                                    <a href="{% url 'ancres' %}#pmad" target="_blank"> PMAD </a> sur le poste .... avec
+                                    utilisateur {% for personne in personne_list%}{{Personne.nom}}{% endfor %}
+                                    verification des identifiants avec l'utilisateur,
+                                    celui si rentre identifiants et mots de passe a l'identique de syscompte.
+                                    tout semble correctement paramètré
+                                </div>
 
-                <div class="card">
-                  <div class="card-header" id="header2">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Soluce n°2</button>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="collapse2" class="collapse" aria-labelledby="header2" data-parent="#exempleAccordeon">
-                      <div class="card-body">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="header2">
+                    <button aria-controls="collapse2" aria-expanded="true" class="btn btn-link" data-target="#collapse2"
+                            data-toggle="collapse" type="button">Soluce n°2
+                    </button>
+                </div>
+                <div aria-labelledby="header2" class="collapse" data-parent="#exempleAccordeon" id="collapse2">
+                    <div class="card-body">
                         <p>Du texte à cacher / afficher grâce au composant collapse.</p>
                         <span class="small">Deuxième ligne de texte.</span>
                     </div>
-                  </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="header3">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">Soluce n°3</button>
-          </div>
-          <div id="collapse3" class="collapse" aria-labelledby="header3" data-parent="#exempleAccordeon">
-            <div class="card-body">
-              <p>Du texte à cacher / afficher grâce au composant collapse.</p>
-              <span class="small">Deuxième ligne de texte.</span>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      </div>
-      </div>
+            <div class="card">
+                <div class="card-header" id="header3">
+                    <button aria-controls="collapse3" aria-expanded="true" class="btn btn-link" data-target="#collapse3"
+                            data-toggle="collapse" type="button">Soluce n°3
+                    </button>
+                </div>
+                <div aria-labelledby="header3" class="collapse" data-parent="#exempleAccordeon" id="collapse3">
+                    <div class="card-body">
+                        <p>Du texte à cacher / afficher grâce au composant collapse.</p>
+                        <span class="small">Deuxième ligne de texte.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 {% endblock %}

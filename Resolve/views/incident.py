@@ -9,8 +9,6 @@ def incidents_list(request):
 def connexionhm(request):
     selected = "connexionHM"
     context = {
-        'text1' : "Nous avons verifier les codes"
+        'text1': "Nous avons verifier les codes"
     }
     return render(request, "resolve/incident/list_incident/connexionHM.html", context, locals())
-
-
