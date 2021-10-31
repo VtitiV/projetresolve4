@@ -18,7 +18,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -26,6 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'Resolve',
+    'dal',
+    'dal_select2',
+    'django.contrib.admin',
 
 ]
 
@@ -105,7 +108,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "Resole/static")
+    os.path.join(BASE_DIR, "Resolve/static")
 ]
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 

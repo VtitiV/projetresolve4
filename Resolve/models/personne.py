@@ -6,8 +6,9 @@ class Personne(models.Model):
     prenom = models.CharField(max_length=30)
     nom = models.CharField(max_length=30)
     telephone = models.CharField(max_length=10)
-    lieu = models.CharField(max_length=30, blank=True)
+    poste = models.CharField(max_length=30, blank=True)
     date_mise_a_jour = models.DateField(verbose_name="Date inscription ", auto_now_add=True)
+    db_table = "Personne"
 
 
 def __str__(self):

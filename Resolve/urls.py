@@ -1,7 +1,7 @@
 from django.urls import path
-
-from .views import home, personne
-from .views import incident, ancres, formulaire
+from .views import home, personne, formulaire
+from .views import incident, ancres
+from .views.personne import PersonneAutocomplete
 
 urlpatterns = [
     path("", home.index, name="home"),
@@ -15,4 +15,7 @@ urlpatterns = [
     path("ancres/", ancres.listancre, name="ancres"),
     # vue user
     path("userforms/", formulaire.formuser, name="user"),
+    # vue personne autocomplete
+    path("personne/autocomplete/", PersonneAutocomplete.as_view(), name="personne_autocomplete"),
+
 ]

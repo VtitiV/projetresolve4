@@ -1,22 +1,27 @@
 {% extends "resolve/base.html" %}
 {% load static %}
 {% block content %}
+{% block user %}{% csrf_token %}
+{% endblock  %}
+    <div class="row p-9">
+    <div class="col-sm-12 mt-6">
+        <div class="card">
+            <div class="card-header">
+                recherche utilisateur
+            </div>
+            <form action="" method="post"></form>
+            <div class="card-body">
 
-<div>
-    <div>
-        <label for="name">Nom :</label>
-        <input id="name" name="user_name" type="text">
-        <label for="name">Prenom :</label>
-        <input id="prenom" name="user_prenom" type="text">
-        <label for="telephone">telephone :</label>
-        <input id="telephone" name="telephone" type="text">
-
+                nom : {{ form.nom }} penom : {{ form.prenom }} poste : {{ form.poste }}
+                {{ form.as_p }}
+                {{ form.media }}
+                <div class="text-right">
+                    <button class="btn btn-info" type="submit"><i aria-hidden="true" class="fa fa-search"></i>Recherche</button>
+                </div>
+            </div>
+        </div>
     </div>
-    {{ form.as_p}}
-    {{ form.nom }}
-    {% csrf_token %}
-    {% block userform1 %}test{{ form.as_p}}
-    {% endblock %}
+</div>
 
 
     <div style="justify-content: space-evenly">

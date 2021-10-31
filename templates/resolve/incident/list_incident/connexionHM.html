@@ -31,6 +31,9 @@
                     <HR align=center size=2 width="100%">
                     <span class="text-warning">Si cela a fonctionner clic sur oui sinon soluce n°2.</span>
                     <!-- Button trigger modal -->
+                    <dialog open>
+  <p>Salutations, à tous et à toutes !</p>
+</dialog>
                     <button class="btn btn-primary" data-target="#exampleModal" data-toggle="modal" type="button">
                         OUI
                     </button>
@@ -46,14 +49,13 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body" id="myText">
+                                <div class="modal-body" id="myModal">
                                     <a href="{% url 'ancres' %}#pmad" target="_blank"> PMAD </a> sur le poste .... avec
-                                    utilisateur {% for personne in personne_list%}{{Personne.nom}}{% endfor %}
+                                    utilisateur {% for PersonneSearchForm in form %}{{Form.nom}}{% endfor %}
                                     verification des identifiants avec l'utilisateur,
                                     celui si rentre identifiants et mots de passe a l'identique de syscompte.
                                     tout semble correctement paramètré
                                 </div>
-
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
                                 </div>
@@ -94,4 +96,7 @@
 
     </div>
 </div>
+<script>
+   var clipboard = new Clipboard('.copy');
+</script>
 {% endblock %}

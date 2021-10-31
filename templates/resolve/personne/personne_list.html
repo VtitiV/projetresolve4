@@ -1,5 +1,10 @@
 {% extends "resolve/base.html" %}
 {% block content %}
+{% csrf_token %}
+{{ form.as_p }}
+                <div class="text-right">
+                    <button class="btn btn-info" type="submit"><i aria-hidden="true" class="fa fa-search"></i>Recherche</button>
+                </div>
 <div class="table-responsive-sm p-4">
     <table class="table table-sm">
         <thead>
